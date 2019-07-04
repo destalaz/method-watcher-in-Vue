@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Vue.JS-Test
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+           <span>Employee Name</span>
+           <input v-model="newData.empName">
+           <span>Salary</span>
+           <input v-model="newData.salary">
+           <br><br>
+           <button @click="addEmp">Save Data</button>
+           <br>
+           <ul>
+               <li v-for="emp in empGroup">
+                   {{emp.empName}} get salary {{emp.salary}}
+               </li>
+           </ul>
+           <h1>จำนวนเงินที่ต้องจ่ายทั้งหมด : {{summation}}</h1>
+           <h1>ค่าเฉลี่ย : {{avg}}</h1>
+        </div>
+        <script src="app.js" charset="utf-8"></script>
+    </body>
+
+</html>
